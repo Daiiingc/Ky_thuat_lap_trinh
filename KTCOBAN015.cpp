@@ -24,16 +24,16 @@ void sinh(int n, int k){
 	} 
 } 
 
-long long gt(int n) {
-    long long s = 1;
-    for (int i = 1; i <= n; i++)
-        s *= i;
-    return s;
-}
+// long long gt(int n) {
+//     long long s = 1;
+//     for (int i = 1; i <= n; i++)
+//         s *= i;
+//     return s;
+// }
 
-long long tohop(int k, int n) {
-    return gt(n) / (gt(k) * gt(n - k));
-}
+// long long tohop(int k, int n) {
+//     return gt(n) / (gt(k) * gt(n - k));
+// }
 
 int main(){
 	int t;
@@ -43,19 +43,21 @@ int main(){
         cin >> n >> k;
         ok = 1;
         ktao(k);
-        cout << tohop(k,n) << endl;
+        // cout << tohop(k,n) << endl;
         while(ok){
-            cout << "["; 
+            // cout << "["; 
             for(int i = 1; i <= k; i++){
                 cout << a[i];
                 if(i != k){
-                    cout << " "; 
+                    // cout << " "; 
                 } 
             }
-            cout << "]";
-		    cout << endl;
+            cout << " ";
+            // cout << "]";
+		    // cout << endl;
 		    sinh(n,k);
         }
+        cout << endl;
     }
     return 0;
 }

@@ -62,7 +62,7 @@ int main(void)
                 break;
             }
             old_value = new_value;
-        }
+	    }
         cout << old_value << endl;
     }
     return 0;
