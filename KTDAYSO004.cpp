@@ -11,7 +11,8 @@ int main(void)
     {
         int n;
         cin >> n;
-        /* Sử dụng Quy hoạch động
+        /*
+        Sử dụng Quy hoạch động
         int A[n], F[n];
         for(int i = 1; i <= n; i++)
         {
@@ -31,7 +32,8 @@ int main(void)
             F[i] += 1;
             result = max(result,F[i]);
         }
-        */ 
+		*/ 
+
        vector <int> A(n);
        for(int &i: A) cin >> i;
 
@@ -41,11 +43,11 @@ int main(void)
        
        for(int i: A)
        {
-            int k = lower_bound(b.begin(),b.end(),A[i]) - b.begin();
+            int k = lower_bound(b.begin(),b.end(),i) - b.begin();
             b[k] = i;
             result = max(result,k);
        }
-        
+		      
         cout << result << endl;
     }
     return 0;
