@@ -26,7 +26,7 @@ using namespace std;
 }
 */
 // Cách nhanh hơn
-int Count_number_5(long long number)
+long long Count_number_5(long long number)
 {
     int count = 0;
     for(long long i = 5; i <= number; i *= 5)

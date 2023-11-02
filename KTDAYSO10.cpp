@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 int main(void)
@@ -10,22 +9,16 @@ int main(void)
     {
         int N, L; // N: Số đại biểu tham dự, L: vị trí bắt đầu
         cin >> N >> L;
-        int A[N];
-        for(int i = 1; i <= N - 1; i++)
+        
+        L += N - 1;
+        unsigned long long S = L;
+        for(int i = 0; i < N-1; i++)
         {
-            cin >> A[i];
+            int t; cin >> t;
+            S += --L;
+            S -= t;
         }
-        sort(A, A + N);
-        for(int i = 1; i <= N - 1; i++)
-        {
-            if(A[i] - L + 1 != i)
-            {
-                cout << i + L - 1 << endl;
-                break;
-            }
-            
-        }
-
+        cout << S << endl;
     }
     
 }
